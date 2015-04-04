@@ -1,0 +1,7 @@
+"/Users/CJ-MACBOOK/Documents/Full Sail University/Course 9 - Visual Frameworks/Projects/Johnson_Charles_Project1/build/android/gen/android/support/v7/appcompat/R.java"
+"/Users/CJ-MACBOOK/Documents/Full Sail University/Course 9 - Visual Frameworks/Projects/Johnson_Charles_Project1/build/android/gen/com/johnson/project1/ApplicationStylesheet.java"
+"/Users/CJ-MACBOOK/Documents/Full Sail University/Course 9 - Visual Frameworks/Projects/Johnson_Charles_Project1/build/android/gen/com/johnson/project1/Johnson_charles_project1Activity.java"
+"/Users/CJ-MACBOOK/Documents/Full Sail University/Course 9 - Visual Frameworks/Projects/Johnson_Charles_Project1/build/android/gen/com/johnson/project1/Johnson_charles_project1AppInfo.java"
+"/Users/CJ-MACBOOK/Documents/Full Sail University/Course 9 - Visual Frameworks/Projects/Johnson_Charles_Project1/build/android/gen/com/johnson/project1/Johnson_charles_project1Application.java"
+"/Users/CJ-MACBOOK/Documents/Full Sail University/Course 9 - Visual Frameworks/Projects/Johnson_Charles_Project1/build/android/gen/com/johnson/project1/R.java"
+"/Users/CJ-MACBOOK/Documents/Full Sail University/Course 9 - Visual Frameworks/Projects/Johnson_Charles_Project1/build/android/gen/ti/modules/titanium/ui/R.java"
