@@ -1,12 +1,12 @@
 dependencies: \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiDOMNodeProxy.m \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiDOMNodeProxy.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiProxy.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiBase.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiThreading.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiPublicAPI.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiEvaluator.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/KrollContext.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiDOMNodeProxy.m \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiDOMNodeProxy.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiProxy.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiBase.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiThreading.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiPublicAPI.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiEvaluator.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/KrollContext.h \
   headers/JavaScriptCore/TiCore.h headers/JavaScriptCore/Ti.h \
   headers/JavaScriptCore/TiBase.h headers/JavaScriptCore/TiContextRef.h \
   headers/JavaScriptCore/TiObjectRef.h \
@@ -14,10 +14,10 @@ dependencies: \
   headers/JavaScriptCore/WebKitAvailability.h \
   headers/JavaScriptCore/TiStringRef.h \
   headers/JavaScriptCore/TiStringRefCF.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/KrollCallback.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/KrollObject.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiBindingRunLoop.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/GDataXMLNode.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/KrollCallback.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/KrollObject.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiBindingRunLoop.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/GDataXMLNode.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/usr/include/libxml2/libxml/tree.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/usr/include/libxml2/libxml/xmlversion.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/usr/include/libxml2/libxml/xmlexports.h \
@@ -41,26 +41,26 @@ dependencies: \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/usr/include/libxml2/libxml/SAX2.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/usr/include/libxml2/libxml/xpath.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/usr/include/libxml2/libxml/xpathInternals.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiDOMDocumentProxy.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiDOMElementProxy.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiDOMTextNodeProxy.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TIDOMCharacterDataProxy.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiDOMNamedNodeMapProxy.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiDOMNodeListProxy.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiDOMAttrProxy.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiDOMCDATANodeProxy.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiDOMCommentProxy.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TIDOMDocumentTypeProxy.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiDOMDocFragProxy.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiDOMPIProxy.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiDOMEntityProxy.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiDOMEntityRefProxy.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiDOMNotationProxy.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiUtils.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiDimension.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiColor.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/WebFont.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiFile.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiBuffer.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiBlob.h \
-  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/Projects/Johnson_Charles_Project1/build/iphone/Classes/TiDOMValidator.h
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiDOMDocumentProxy.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiDOMElementProxy.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiDOMTextNodeProxy.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TIDOMCharacterDataProxy.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiDOMNamedNodeMapProxy.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiDOMNodeListProxy.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiDOMAttrProxy.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiDOMCDATANodeProxy.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiDOMCommentProxy.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TIDOMDocumentTypeProxy.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiDOMDocFragProxy.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiDOMPIProxy.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiDOMEntityProxy.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiDOMEntityRefProxy.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiDOMNotationProxy.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiUtils.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiDimension.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiColor.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/WebFont.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiFile.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiBuffer.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiBlob.h \
+  /Users/CJ-MACBOOK/Documents/Full\ Sail\ University/Course\ 9\ -\ Visual\ Frameworks/VFW1830/Johnson_Charles_Project1/build/iphone/Classes/TiDOMValidator.h

@@ -7,6 +7,17 @@ var heroWindow = Ti.UI.createWindow({
 	
 });
 
+var favHeros = Ti.UI.createView({
+
+	backgroundColor: "#000",
+	top: 40,
+	bottom: 100,
+	left: 20,
+	right: 20,
+	borderRadius: 10
+});
+
+heroWindow.add(favHeros);
 heroWindow.open();
 
 

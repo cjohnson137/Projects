@@ -1,0 +1,23 @@
+Ti.UI.setBackgroundColor('#040985');
+
+var heroWindow = Ti.UI.createWindow({
+	
+	backgroundColor: "#040985",
+	backgroundImage: "background.jpg"
+	
+});
+
+var favHeros = Ti.UI.createView({
+
+	backgroundColor: "#000",
+	top: 20,
+	bottom: 20,
+	left: 20,
+	bottom: 200
+});
+
+heroWindow.add(favHeros);
+heroWindow.open();
+
+
+
