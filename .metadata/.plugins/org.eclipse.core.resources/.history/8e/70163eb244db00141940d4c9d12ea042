@@ -5,15 +5,14 @@ var x = -1;
 var nextHero = function(){
 	
 	x++;
-	if (x >6){
-		
-		x = 0;
-	}
-	
 	txtHero.text = hero[x];
 	
 	
 	
+	if (x >6){
+		
+		x = 0;
+	}
 	
 };
 
