@@ -1,0 +1,59 @@
+Ti.UI.setBackgroundColor('#040985');
+
+var hero = ["The Flash","Deadpool","Superman","Goku","Silver Surfer","Natusu","The Hulk"]
+
+var heroWindow = Ti.UI.createWindow({
+	
+	backgroundColor: "#040985",
+	backgroundImage: "background.jpg"
+	
+});
+
+var favHeros = Ti.UI.createView({
+
+	backgroundColor: "#000",
+	top: 40,
+	left: 20,
+	right: 20,
+	height: 450,
+	borderRadius: 10
+});
+
+var txtHero = Ti.UI.createLabel({
+	
+	text: "Comic Heroes",
+	font: {fontSize: 40, fontFaimily: "Arial Black", fontWeight: "bold"},
+	color: "#FFF",
+	top: "35%"
+	
+});
+
+var nextButton = Ti.UI.createButton ({
+	
+	backgroundColor: "#6DD900",
+	top: 500,
+	right: 20,
+	left: 150,
+	width: "45%",
+	height: 50,
+	borderRadius: 10
+	
+	
+	
+});
+
+var nextHero = function(){
+	txtHero.hide();
+	txtHero = null;
+	
+	txtHero.text = hero[0]
+	
+	
+};
+
+heroWindow.add(favHeros,nextButton);
+heroWindow.add(txtHero)
+heroWindow.open();
+
+
+

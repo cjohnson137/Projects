@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.appcelerator.titanium.mobile.ui.ios.simulator.launchConfigurationType">
 <stringAttribute key="ATTR_PROJECT_NAME" value="Johnson_Charles_Project1"/>
-<stringAttribute key="device_id" value="FEBEDB8E-8AC1-4D53-9D5C-8DFFAE834F3C"/>
+<stringAttribute key="device_id" value="C6531EC8-EEE4-439C-9DFD-81E042B5A4E8"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/Johnson_Charles_Project1"/>
 </listAttribute>
@@ -10,6 +10,5 @@
 </listAttribute>
 <stringAttribute key="process_factory_id" value="com.appcelerator.titanium.ui.logLevelFilteringProcessFactory"/>
 <stringAttribute key="sdk_version" value="8.1"/>
-<stringAttribute key="simulator_debug_config" value="10.0.0.9:57095"/>
 <stringAttribute key="simulator_version" value="8.1"/>
 </launchConfiguration>
