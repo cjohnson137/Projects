@@ -19,17 +19,13 @@ var favHeros = Ti.UI.createView({
 
 var txtHero = Ti.UI.createLabel({
 	
-	text: "Favorite Heroes",
+	text: "The Flash",
 	font: {fontSize: 40, fontFaimily: "Arial Black", fontWeight: "bold"},
 	color: "#FFF",
 	top: "45ß%"
 	
 });
 
-var switchHero = function({
-	
-	
-});
 
 heroWindow.add(favHeros);
 heroWindow.add(txtHero)

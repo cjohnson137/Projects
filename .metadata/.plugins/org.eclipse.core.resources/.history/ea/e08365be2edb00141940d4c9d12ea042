@@ -17,22 +17,7 @@ var favHeros = Ti.UI.createView({
 	borderRadius: 10
 });
 
-var txtHero = Ti.UI.createLabel({
-	
-	text: "Favorite Heroes",
-	font: {fontSize: 40, fontFaimily: "Arial Black", fontWeight: "bold"},
-	color: "#FFF",
-	top: "45ß%"
-	
-});
-
-var switchHero = function({
-	
-	
-});
-
 heroWindow.add(favHeros);
-heroWindow.add(txtHero)
 heroWindow.open();
 
 
