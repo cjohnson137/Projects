@@ -1,0 +1,44 @@
+Ti.UI.setBackgroundColor('#040985');
+
+var mainWindow = Ti.UI.createWindow({
+	
+	backgroundColor: "#040985",
+	backgroundImage: "background.jpg"
+	
+});
+
+var headerSection = Ti.UI.createView({
+	backgroundColor: "#000000",
+	height: 75,
+	top: 30,
+	shadow:{
+        shadowRadius:10,
+        shadowOpacity:0.5,
+        shadowOffset:{x:5, y:10}
+    }
+});
+
+var headerText = Ti.UI.createLabel({
+	
+	text: "Game Consoles",
+	font: {fontSize: 20, fontFamily: "Futura Medium"}
+	
+	
+});
+
+var border = Ti.UI.createView({
+	backgroundColor: "#FFF",
+	height: 1,
+	top: headerSection.top + headerSection.height,
+	shadow:{
+        shadowRadius:10,
+        shadowOpacity:0.5,
+        shadowOffset:{x:5, y:10}
+    }
+});
+
+mainWindow.add(headerSection,border);
+headerSection.add(headerText);
+mainWindow.open();
+
+

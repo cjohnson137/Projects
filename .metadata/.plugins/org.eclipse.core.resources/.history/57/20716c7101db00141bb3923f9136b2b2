@@ -1,7 +1,0 @@
-Ti.UI.setBackgroundColor('#040985');
-Ti.UI.setBackgroundImage('background.jpg');
-
-var heroWindow = Ti.UI.createWindow();
-
-
-

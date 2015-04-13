@@ -1,0 +1,8 @@
+Ti.UI.setBackgroundColor('#040985');
+
+var mainWindow = Ti.UI.createWindow({
+	
+	backgroundColor: "#040985",
+	backgroundImage: "background.jpg"
+	
+});
