@@ -1,0 +1,149 @@
+Ti.UI.setBackgroundColor('#040985');
+
+var gamesPS4 = [{title: "Destiny"}, {title: "Injustice"}, {title: "Assassin's Creed: Black Flag"}, {title: "NBA 2K25"}, {title: "GTA 5"}];
+var gamesXbox = [{title: "TitanFall"}, {title: "Minecraft"}, {title: "Saints Row"}, {title: "Halo Reach"}, {title: "Dark Souls"}];
+
+
+var mainWindow = Ti.UI.createWindow({
+	
+	backgroundColor: "#040985",
+	backgroundImage: "background.png",
+		
+
+});
+
+var headerSection = Ti.UI.createView({
+	//backgroundColor: "#000000",
+	backgroundImage: "headerBg.png",
+	height: 75,
+	top: 30,
+	shadow:{
+        shadowRadius:10,
+        shadowOpacity:0.5,
+        shadowOffset:{x:5, y:10}
+    }
+});
+
+var headerText = Ti.UI.createLabel({
+	
+	text: "Game Consoles",
+	font: {fontSize: 45, fontFamily: "Futura Medium"},
+	color: "#FFF"
+	
+	
+});
+
+var border = Ti.UI.createView({
+	backgroundColor: "#FFF",
+	height: 1,
+	top: headerSection.top + headerSection.height,
+	shadow:{
+        shadowRadius:10,
+        shadowOpacity:0.5,
+        shadowOffset:{x:5, y:10}
+    }
+});
+
+// PLAYSTATION TITLE VIEWS
+
+var tableHeaderPs = Ti.UI.createView ({
+	
+	backgroundColor: "#000",
+	height: 45
+});
+
+var tableTextPs = Ti.UI.createLabel ({
+	
+	text: "PS4 Console Games",
+	font: {fontSize: 22, fontFamily: "Futura Medium", weight: "bold"},
+	color: "#040985",
+	top: 9,
+	left: 10
+	
+});
+
+// XBOX TITLE VIEWS
+var tableHeaderXb = Ti.UI.createView ({
+	
+	backgroundColor: "#000",
+	height: 45
+});
+
+
+var tableTextXb = Ti.UI.createLabel ({
+	
+	text: "Xbox Console Games",
+	font: {fontSize: 22, fontFamily: "Futura Medium", weight: "bold"},
+	color: "#6DD900",
+	top: 9,
+	left: 10
+	
+});
+
+tableHeaderPs.add(tableTextPs);
+tableHeaderXb.add(tableTextXb);
+
+
+// BUILD TABLE VIEW FOR MY GAME CONSOLES
+var console = Ti.UI.createTableView ({
+	
+	top: headerSection.top + headerSection.height + 10,
+	backgroundColor: "#3A00FF",
+});
+
+if (Ti.Platform.name === "iPhone OS") {
+	console.style = Ti.UI.iPhone.TableViewStyle.GROUPED;
+	
+}
+
+
+
+var ps4Section = Ti.UI.createTableViewSection ({
+	
+	headerView: tableHeaderPs,
+
+	//headerTitle: "PS4 Console Games",
+	footerTitle: "PS4 games list."
+
+	
+});
+var xboxSection = Ti.UI.createTableViewSection ({
+	
+	headerView: tableHeaderXb,
+	headerTitle: "Xbox Console Games",
+	footerTitle: "Xbox games list."
+	
+});
+
+
+// PLAYSTATION DATA LOOP
+for  (x=0, t=gamesPS4.length; x<t; x++) {
+	
+	var consoleRow = Ti.UI.createTableViewRow ({
+		title: gamesPS4[x].title
+		
+	});
+	ps4Section.add(consoleRow);
+};
+
+
+// XBOX DATA LOOP
+for  (x=0, t=gamesXbox.length; x<t; x++) {
+	
+	var consoleRow = Ti.UI.createTableViewRow ({
+		title: gamesXbox[x].title
+		
+	});
+	xboxSection.add(consoleRow);
+};
+
+var consoleSections = [ps4Section,xboxSection];
+
+console.setData (consoleSections);
+
+
+mainWindow.add(headerSection, console);
+headerSection.add(headerText);
+mainWindow.open();
+
+

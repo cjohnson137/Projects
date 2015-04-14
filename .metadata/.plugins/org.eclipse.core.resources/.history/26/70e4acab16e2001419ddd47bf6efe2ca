@@ -1,0 +1,121 @@
+Ti.UI.setBackgroundColor('#040985');
+
+var gamesPS4 = [{title: "Destiny"}, {title: "Injustice"}, {title: "Assassin's Creed: Black Flag"}, {title: "NBA 2K25"}, {title: "GTA 5"}];
+var gamesXbox = [{title: "TitanFall"}, {title: "Minecraft"}, {title: "Saints Row"}, {title: "Halo Reach"}, {title: "Dark Souls"}];
+
+
+var mainWindow = Ti.UI.createWindow({
+	
+	backgroundColor: "#040985",
+	backgroundImage: "background.png",
+		
+
+});
+
+var headerSection = Ti.UI.createView({
+	//backgroundColor: "#000000",
+	backgroundImage: "headerBg.png",
+	height: 75,
+	top: 30,
+	shadow:{
+        shadowRadius:10,
+        shadowOpacity:0.5,
+        shadowOffset:{x:5, y:10}
+    }
+});
+
+var headerText = Ti.UI.createLabel({
+	
+	text: "Game Consoles",
+	font: {fontSize: 20, fontFamily: "Futura Medium"},
+	color: "#FFF"
+	
+	
+});
+
+var border = Ti.UI.createView({
+	backgroundColor: "#FFF",
+	height: 1,
+	top: headerSection.top + headerSection.height,
+	shadow:{
+        shadowRadius:10,
+        shadowOpacity:0.5,
+        shadowOffset:{x:5, y:10}
+    }
+});
+
+var tableHeader = Ti.UI.createView ({
+	
+	backgroundColor: "#6DD900",
+	height: 45
+});
+
+var tableText = Ti.UI.createLabel ({
+	
+	text: "PS4 Console Games",
+	font: {fontSize: 18, fontFamily: "Futura Medium"},
+	color: "#FFF",
+	top: 7,
+	left: 10
+	
+});
+
+tableHeader.add(tableText);
+
+var console = Ti.UI.createTableView ({
+	
+	top: headerSection.top + headerSection.height + 10,
+	backgroundColor: "#3A00FF",
+});
+
+if (Ti.Platform.name === "iPhone OS") {
+	console.style = Ti.UI.iPhone.TableViewStyle.GROUPED;
+	
+}
+
+
+
+var ps4Section = Ti.UI.createTableViewSection ({
+	
+	headerView: tableHeader,
+
+	//headerTitle: "PS4 Console Games",
+	footerTitle: "PS4 games list."
+
+	
+});
+var xboxSection = Ti.UI.createTableViewSection ({
+	
+	headerTitle: "Xbox Console Games",
+	footerTitle: "Xbox games list."
+	
+});
+
+for  (x=0, t=gamesPS4.length; x<t; x++) {
+	
+	var consoleRow = Ti.UI.createTableViewRow ({
+		title: gamesPS4[x].title
+		
+	});
+	ps4Section.add(consoleRow);
+};
+
+for  (x=0, t=gamesXbox.length; x<t; x++) {
+	
+	var consoleRow = Ti.UI.createTableViewRow ({
+		title: gamesXbox[x].title
+		
+	});
+	xboxSection.add(consoleRow);
+};
+
+var consoleSections = [ps4Section,xboxSection];
+
+console.setData (consoleSections);
+
+
+mainWindow.add(headerSection, console);
+headerSection.add(headerText);
+mainWindow.open();
+
+
