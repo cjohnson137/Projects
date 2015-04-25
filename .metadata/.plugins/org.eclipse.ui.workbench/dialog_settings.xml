@@ -4,12 +4,20 @@
 		<item value="900" key="dialogWidth"/>
 		<item value="563" key="dialogHeight"/>
 		<list key="orderedProviders">
+			<item value="org.eclipse.ui.preferences"/>
 		</list>
 		<list key="textArray">
+			<item value="history"/>
 		</list>
 		<list key="orderedElements">
+			<item value="org.eclipse.ui.preferencePages.FileStates"/>
 		</list>
 		<list key="textEntries">
+			<item value="1"/>
 		</list>
+	</section>
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="54" key="DIALOG_Y_ORIGIN"/>
+		<item value="220" key="DIALOG_X_ORIGIN"/>
 	</section>
 </section>

@@ -2,8 +2,10 @@
 Johnson_Charles_Project1\:launchMode=run
 Johnson_Charles_Project1\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.ipad.launchShortcut.AA5DFE60-9C02-4C28-8D15-36A4526360CC
 Johnson_Charles_Project2\:launchMode=run
-Johnson_Charles_Project2\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.ipad.launchShortcut.AA5DFE60-9C02-4C28-8D15-36A4526360CC
-LAST_LAUNCH_TIMESTAMP=1428865319770
+Johnson_Charles_Project2\:launchShortcut=com.appcelerator.titanium.mobile.ui.android.device.launchShortcut
+Johnson_Charles_Project3\:launchMode=run
+Johnson_Charles_Project3\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.ipad.launchShortcut.17E110CB-D976-4D4C-A14E-2813F92B6FD6
+LAST_LAUNCH_TIMESTAMP=1429941664663
 Test_Project\:launchMode=run
 Test_Project\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.FEBEDB8E-8AC1-4D53-9D5C-8DFFAE834F3C
 eclipse.preferences.version=1
