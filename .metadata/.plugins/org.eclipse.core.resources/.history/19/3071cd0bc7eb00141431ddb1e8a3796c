@@ -10,10 +10,10 @@ var buttonHeight = 35;
 var rowCount = 4;
 var margin = 10;
 var canvasWidth = Ti.Platform.displayCaps.platformWidth + margin * rowCount;
-var size = canvasWidth / rowCount;
+var size = "85";
 
 
-// console.log(myPhotos);
+console.log(myPhotos);
 
 
 // Create Intro Section

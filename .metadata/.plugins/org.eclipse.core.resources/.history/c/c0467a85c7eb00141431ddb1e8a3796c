@@ -13,7 +13,7 @@ var canvasWidth = Ti.Platform.displayCaps.platformWidth + margin * rowCount;
 var size = canvasWidth / rowCount;
 
 
-// console.log(myPhotos);
+console.log(myPhotos);
 
 
 // Create Intro Section
