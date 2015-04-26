@@ -1,0 +1,12 @@
+
+		
+
+
+var largePic = function(){
+	
+		var largeImageWin = Ti.UI.createWindow({
+			
+			backgroundColor: "#000"
+			
+			
+		});

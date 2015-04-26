@@ -1,0 +1,12 @@
+var myFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "pics");
+var myPhotos = myFolder.getDirectoryListing();
+
+var winWidth = Ti.Platform.displayCaps.platformWidth;
+var winHeight = Ti.Platform.displayCaps.platformHeight;
+
+var buttonHeight = 35;
+var rowCount = 4;
+var margin = 10;
+var canvasWidth = Ti.Platform.displayCaps.platformWidth + margin * rowCount;
+var size = canvasWidth / rowCount;
+

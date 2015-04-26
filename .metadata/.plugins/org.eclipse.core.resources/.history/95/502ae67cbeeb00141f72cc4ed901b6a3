@@ -1,0 +1,203 @@
+
+
+var myFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "pics");
+var myPhotos = myFolder.getDirectoryListing();
+
+var winWidth = Ti.Platform.displayCaps.platformWidth;
+var winHeight = Ti.Platform.displayCaps.platformHeight;
+
+var buttonHeight = 35;
+var rowCount = 4;
+var margin = 10;
+var canvasWidth = Ti.Platform.displayCaps.platformWidth + margin * rowCount;
+var size = canvasWidth / rowCount;
+
+
+console.log(myPhotos);
+
+
+// Create Intro Section
+
+var introWin = Ti.UI.createWindow({
+	
+	backgroundColor: "#000",
+	backgroundImage: "background.png"
+	
+});
+
+var border = Ti.UI.createView({
+	
+	backgroundColor: "#000",
+	color: "FFF",
+	width: winWidth,
+	height: 1,
+	top: 20
+	
+});
+
+var openButton = Ti.UI.createLabel ({
+	
+	text: "Open My Life Gallery",
+	backgroundColor: "#85B200",
+	color: "#FFF",
+	font: {fontSize: 15, fontFamily: "Futura-CondensedExtraBold"},
+	height: 60,
+	textAlign: "center",
+	width: 220,
+	borderRadius: 10
+	
+});
+
+var openGallery = function(){
+	
+	galleryWin.add(border);
+	galleryWin.add(projectContainer);
+	galleryWin.add(returnButton);
+
+	galleryWin.open();
+	
+};	
+
+var returnButton = Ti.UI.createLabel({
+		
+	text: "Close Window",
+	backgroundColor: "000",
+	font: {fontSize: 15, fontFamily: "Futura-Medium", weight: "bold"},
+	color: "#fff",		
+	borderRadius: 20,
+	width: 200,
+	height: 35,
+	bottom: 5,
+	textAlign: "center"
+		
+});
+		
+// Open Gallery Button	
+openButton.addEventListener("click", openGallery);
+
+
+// Create Gallery Section
+
+
+	
+var galleryWin = Ti.UI.createWindow({
+	
+	backgroundColor: "#3A00FF",
+	backgroundImage: "background.png",
+	layout: "horizontal"
+		
+});
+
+
+
+var projectContainer = Ti.UI.createScrollView({
+	
+	top:0,
+	width: winWidth,
+	contentWidth: winWidth,
+	height: winHeight - border.top - border.height,
+	backgroundColor: "#3A00FF",
+	layout: "horizontal",
+	showVerticalScrollIndicator: true
+	
+});
+
+		var closeGalleryWindow = function() {
+		
+		galleryWin.close();
+		
+		};
+		
+			returnButton.addEventListener("click" , closeGalleryWindow);
+
+			largeImageWin.add(returnButton);
+			largeImageWin.add(largePicView);
+			largeImageWin.add(border);
+			largeImageWin.open();
+
+
+	
+	
+	};
+
+
+// Large Image Window
+
+var largePic = function(){
+	
+		var largeImageWin = Ti.UI.createWindow({
+			
+			backgroundColor: "#000"
+			
+			
+		});
+		
+		var largePicView = Ti.UI.createImageView({
+			
+			image: this.image,
+			top: border.top + border.height,
+			left: 10,
+			right: 10,
+			bottom: 35
+
+			
+		});
+		
+
+		
+		var closeImageWindow = function() {
+		
+		largeImageWin.close();
+		
+		};
+		
+			returnButton.addEventListener("click" , closeImageWindow);
+
+			largeImageWin.add(returnButton);
+			largeImageWin.add(largePicView);
+			largeImageWin.add(border);
+			largeImageWin.open();
+
+
+	
+	
+	};
+			
+			
+// Load Images Loop
+
+		for (var x=0; x<myPhotos.length; x++){
+			
+			var view = Ti.UI.createView({
+				
+				backgroundColor: "#000",
+				top: 10,
+				left: 10,
+				width: size,
+				height: size
+				
+			});
+			
+			var thumb = Ti.UI.createImageView({
+				top: 0,
+				image: "pics/" + myPhotos[x],
+				width: view.width * 3,
+		
+			});
+			view.add(thumb);
+			projectContainer.add(view);
+			
+			thumb.addEventListener("click", largePic);			
+		};
+		
+					
+
+
+
+var loadfile = require("gallery");
+
+introWin.add(border);
+introWin.add(openButton);
+
+introWin.open();
+	

@@ -1,0 +1,69 @@
+var myFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "pics");
+var myPhotos = myFolder.getDirectoryListing();
+
+var winWidth = Ti.Platform.displayCaps.platformWidth;
+var winHeight = Ti.Platform.displayCaps.platformHeight;
+
+var buttonHeight = 35;
+var rowCount = 4;
+var margin = 10;
+var canvasWidth = Ti.Platform.displayCaps.platformWidth + margin * rowCount;
+var size = canvasWidth / rowCount;
+
+
+console.log(myPhotos);
+
+
+// Create Intro Section
+
+var introWin = Ti.UI.createWindow({
+	
+	backgroundColor: "#000",
+	backgroundImage: "background.png"
+	
+});
+
+var border = Ti.UI.createView({
+	
+	backgroundColor: "#000",
+	color: "FFF",
+	width: winWidth,
+	height: 1,
+	top: 20
+	
+});
+
+var openButton = Ti.UI.createLabel ({
+	
+	text: "Open My Life Gallery",
+	backgroundColor: "#85B200",
+	color: "#FFF",
+	font: {fontSize: 15, fontFamily: "Futura-CondensedExtraBold"},
+	height: 60,
+	textAlign: "center",
+	width: 220,
+	borderRadius: 10
+	
+});
+
+var openGallery = function(){
+	
+	galleryWin.add(border);
+	galleryWin.add(projectContainer);
+
+	galleryWin.open();
+	
+var loadfile = require("gallery");
+	
+openButton.addEventListener("click", openGallery);
+
+
+
+};
+
+
+introWin.add(border);
+introWin.add(openButton);
+
+introWin.open();
+	

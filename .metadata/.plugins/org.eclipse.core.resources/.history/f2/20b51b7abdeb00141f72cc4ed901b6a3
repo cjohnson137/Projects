@@ -1,0 +1,51 @@
+var largePic = function(){
+	
+		var largeImageWin = Ti.UI.createWindow({
+			
+			backgroundColor: "#000"
+			
+			
+		});
+		
+		var largePicView = Ti.UI.createImageView({
+			
+			image: this.image,
+			top: border.top + border.height,
+			left: 10,
+			right: 10,
+			bottom: 35
+
+			
+		});
+		
+		var returnButton = Ti.UI.createLabel({
+		
+		text: "Close Window",
+		backgroundColor: "000",
+		font: {fontSize: 15, fontFamily: "Futura-Medium", weight: "bold"},
+		color: "#fff",		
+		borderRadius: 20,
+		width: 200,
+		height: 35,
+		bottom: 5,
+		textAlign: "center"
+		
+		});
+		
+		var closeImageWindow = function() {
+		
+		largeImageWin.close();
+		
+		};
+		
+			returnButton.addEventListener("click" , closeImageWindow);
+
+			largeImageWin.add(returnButton);
+			largeImageWin.add(largePicView);
+			largeImageWin.add(border);
+			largeImageWin.open();
+
+
+	
+	
+	};
