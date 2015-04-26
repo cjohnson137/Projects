@@ -1,0 +1,104 @@
+var myFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "pics");
+var myPhotos = myFolder.getDirectoryListing();
+
+var winWidth = Ti.Platform.displayCaps.platformWidth;
+var winHeight = Ti.Platform.displayCaps.platformHeight;
+var rowCount = 4;
+var margin = 10;
+var size = 75;
+
+
+// Create Intro Section
+
+var introWin = Ti.UI.createWindow({
+	
+	backgroundColor: "#000",
+	backgroundImage: "background.png"
+	
+});
+
+var openButton = Ti.UI.createLabel ({
+	
+	text: "Open My Life Gallery",
+	backgroundColor: "#85B200",
+	color: "#FFF",
+	font: {fontSize: 15, fontFamily: "Futura-CondensedExtraBold"},
+	height: 60,
+	textAlign: "center",
+	width: 220,
+	borderRadius: 10
+	
+});
+
+var openGallery = function(){
+	
+	galleryWin.add(border);
+	galleryWin.add(projectContainer);
+
+	galleryWin.open();
+	
+	for (var x=0; x<myPhotos.length; x++){
+	
+	var view = Ti.UI.createView({
+		
+		backgroundColor: "#FFF",
+		top: 10,
+		left: 10,
+		width: size,
+		height: size
+		
+	});
+	
+	var thumb = Ti.UI.createImageView({
+		
+		image: "pics/" + myPhotos[x]
+	});
+	view.add(thumb);
+	projectContainer.add(view);
+	
+	
+};
+	
+};
+openButton.addEventListener("click", openGallery);
+
+
+
+// Create Gallery Section
+
+var galleryWin = Ti.UI.createWindow ({
+	
+	backgroundColor: "#3A00FF",
+	backgroundImage: "background.png",
+	layout: "horizontal"
+		
+});
+
+var border = Ti.UI.createView ({
+	
+	backgroundColor: "#000",
+	color: "FFF",
+	width: winWidth,
+	height: 1,
+	top: 20
+	
+});
+
+var projectContainer = Ti.UI.createScrollView ({
+	
+	top:0,
+	width: winWidth,
+	height: winWidth-border.top-border.height,
+	backgroundColor: "#3A00FF",
+	layout: "horizontal"
+	
+});
+
+
+
+introWin.add(border);
+introWin.add(openButton);
+
+introWin.open();
+
+

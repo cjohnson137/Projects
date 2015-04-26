@@ -1,0 +1,71 @@
+
+
+winWidth = Ti.UI.Platform.displayCaps.platformWidth;
+winHeight = Ti.UI.Platform.displayCaps.platformHeight;
+rowCount = 4;
+margin = 10;
+
+
+// Create Intro Section
+
+var introWin = Ti.UI.createWindow({
+	
+	backgroundColor: "#000",
+	backgroundImage: "background.png"
+	
+});
+
+var openButton = Ti.UI.createLabel ({
+	
+	text: "Open My Life Gallery",
+	backgroundColor: "#85B200",
+	color: "#FFF",
+	borderRadius: 10
+	
+});
+
+var openGallery = function(){
+	
+	galleryWin.add(border);
+	galleryWin.add(projectContainer);
+
+	galleryWin.open();
+	
+	
+};
+
+
+
+// Create Gallery Section
+
+var galleryWin = Ti.UI.createWindow ({
+	
+	backgroundColor: "#3A00FF",
+	backgroundImage: "background.png"
+		
+});
+
+var border = Ti.UI.createView ({
+	
+	backgroundColor: "#000",
+	color: "FFF",
+	width: winWidth,
+	height: 1,
+	top: 20
+	
+});
+
+var projectContainer = Ti.UI.createView ({
+	
+	width: winWidth,
+	backgroundColor: "#3A00FF"
+	
+});
+
+openButton.addEventListener("click", openGallery);
+
+introWin.add(border);
+introWin.add(openButton);
+
+
+

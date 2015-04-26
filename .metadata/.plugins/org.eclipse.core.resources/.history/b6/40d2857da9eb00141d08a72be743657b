@@ -1,0 +1,61 @@
+var myFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "pics");
+var myPhotos = myFolder.getDirectoryListing();
+
+var winWidth = Ti.Platform.displayCaps.platformWidth;
+var winHeight = Ti.Platform.displayCaps.platformHeight;
+var rowCount = 4;
+var margin = 10;
+var size = 75;
+
+
+
+
+
+// Create Gallery Section
+
+var galleryWin = Ti.UI.createWindow({
+	
+	backgroundColor: "#3A00FF",
+	backgroundImage: "background.png",
+	layout: "horizontal"
+		
+});
+
+var border = Ti.UI.createView({
+	
+	backgroundColor: "#000",
+	color: "FFF",
+	width: winWidth,
+	height: 1,
+	top: 20
+	
+});
+
+var projectContainer = Ti.UI.createScrollView({
+	
+	top:0,
+	width: winWidth,
+	height: winWidth-border.top-border.height,
+	backgroundColor: "#3A00FF",
+	layout: "horizontal",
+	showVerticalScrollIndicator: true
+	
+});
+
+
+
+
+var testImage = Ti.UI.createImageView({
+	
+	image: "pics/2010-12-12 15.08.11.jpg",
+	left: 10,
+	right: 10,
+	top: 20,
+	
+});
+	
+	galleryWin.add(border);
+	galleryWin.add(testImage);
+
+	galleryWin.open();
+	
