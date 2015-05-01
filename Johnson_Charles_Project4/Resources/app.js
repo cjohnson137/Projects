@@ -1,64 +1,221 @@
-// this sets the background color of the master UIView (when there are no windows/tab groups on it)
-Titanium.UI.setBackgroundColor('#000');
-
-// create tab group
-var tabGroup = Titanium.UI.createTabGroup();
 
 
-//
-// create base UI tab and root window
-//
-var win1 = Titanium.UI.createWindow({  
-    title:'Tab 1',
-    backgroundColor:'#fff'
-});
-var tab1 = Titanium.UI.createTab({  
-    icon:'KS_nav_views.png',
-    title:'Tab 1',
-    window:win1
-});
+var myFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "gallery");
+var myPhotos = myFolder.getDirectoryListing();
 
-var label1 = Titanium.UI.createLabel({
-	color:'#999',
-	text:'I am Window 1',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
-});
+var winWidth = Ti.Platform.displayCaps.platformWidth;
+var winHeight = Ti.Platform.displayCaps.platformHeight;
 
-win1.add(label1);
+var buttonHeight = 35;
+var rowCount = 4;
+var margin = 10;
+var canvasWidth = Ti.Platform.displayCaps.platformWidth + margin * (rowCount + 1);
+var size = canvasWidth / rowCount;
 
-//
-// create controls tab and root window
-//
-var win2 = Titanium.UI.createWindow({  
-    title:'Tab 2',
-    backgroundColor:'#fff'
-});
-var tab2 = Titanium.UI.createTab({  
-    icon:'KS_nav_ui.png',
-    title:'Tab 2',
-    window:win2
+
+// console.log(myPhotos);
+
+
+// Create Intro Section
+
+var introWin = Ti.UI.createWindow({
+	
+	// backgroundColor: "#000",
+	backgroundImage: "background.png",
+	color: "#FFF"
+	
 });
 
-var label2 = Titanium.UI.createLabel({
-	color:'#999',
-	text:'I am Window 2',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
+var border = Ti.UI.createView({
+	
+	backgroundColor: "#85B200",
+	color: "FFF",
+	width: winWidth,
+	height: 1,
+	top: 20
+	
 });
 
-win2.add(label2);
+var openButton = Ti.UI.createLabel ({
+	
+	text: "Open My Life Gallery",
+	backgroundColor: "#85B200",
+	color: "#FFF",
+	font: {fontSize: 15, fontFamily: "Futura-CondensedExtraBold"},
+	height: 60,
+	textAlign: "center",
+	width: 220,
+	borderRadius: 10
+	
+});
+
+var closeButton = Ti.UI.createLabel({
+		
+	text: "Close Window",
+	backgroundColor: "85B200",
+	font: {fontSize: 15, fontFamily: "Futura-Medium", weight: "bold"},
+	color: "#fff",		
+	width: "100%",
+	height: 35,
+	textAlign: "center"
+		
+});
+
+
+var returnButton = Ti.UI.createLabel({
+		
+	text: "Close Image",
+	backgroundColor: "85B200",
+	font: {fontSize: 15, fontFamily: "Futura-Medium", weight: "bold"},
+	color: "#fff",		
+	width: "100%",
+	height: 35,
+	bottom: 0,
+	textAlign: "center"
+		
+});
+
+	
+var openGallery = function(){
+	
+
+
+	galleryWin.open();
+	
+};	
+
+
+		
+// Open Gallery Button	
+openButton.addEventListener("click", openGallery);
+
+
+// Create Gallery Section
+
+
+	
+var galleryWin = Ti.UI.createWindow({
+	
+	backgroundColor: "#3A00FF",
+	backgroundImage: "background.png",
+	layout: "horizontal"
+		
+});
 
 
 
-//
-//  add tabs
-//
-tabGroup.addTab(tab1);  
-tabGroup.addTab(tab2);  
+var projectContainer = Ti.UI.createScrollView({
+	
+	top:0,	bottom: 35,
+	backgroundImage: "background.png",
+	
+	width: winWidth,
+	contentWidth: winWidth,
+	height: winHeight - border.top - border.height - buttonHeight * 2,
+	backgroundColor: "#3A00FF",
+	layout: "horizontal",
+	showVerticalScrollIndicator: true
+	
+});
 
 
-// open tab group
-tabGroup.open();
+		var closeGalleryWindow = function() {
+		
+		galleryWin.close();
+		
+		};
+		
+closeButton.addEventListener("click" , closeGalleryWindow);
+
+
+	
+	
+	
+
+
+// Large Image Window
+
+var largePic = function(){
+	
+		var largeImageWin = Ti.UI.createWindow({
+			
+			backgroundColor: "#000",
+			backgroundImage: "background.png",
+
+			
+		});
+		
+		var largePicView = Ti.UI.createImageView({
+			
+			image: this.image,
+			top: border.top + border.height + 10,
+			left: 10,
+			right: 10,
+			bottom: 65
+
+			
+		});
+		
+
+		
+		var closeImageWindow = function() {
+		
+		largeImageWin.close();
+		
+		};
+		
+		returnButton.addEventListener("click" , closeImageWindow);
+
+			largeImageWin.add(returnButton);
+			largeImageWin.add(largePicView);
+			largeImageWin.add(border);
+			largeImageWin.open();
+
+
+	
+	
+	};
+			
+			
+// Load Images Loop
+
+		for (var x=0; x<myPhotos.length; x++){
+			
+			var view = Ti.UI.createView({
+				
+				backgroundColor: "#000",
+				top: 10,
+				left: 10,
+				width: size,
+				height: size
+				
+			});
+			
+			var thumb = Ti.UI.createImageView({
+				top: 0,
+				image: "pics/" + myPhotos[x],
+				width: view.width * 3,
+		
+			});
+			view.add(thumb);
+			projectContainer.add(view);
+			
+			thumb.addEventListener("click", largePic);			
+		};
+		
+					
+
+
+
+// var loadfile = require("gallery");
+
+introWin.add(border);
+introWin.add(openButton);
+
+galleryWin.add(border);
+	galleryWin.add(projectContainer);
+	galleryWin.add(closeButton);
+	
+
+introWin.open();
+	

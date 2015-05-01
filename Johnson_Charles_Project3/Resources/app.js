@@ -36,14 +36,10 @@ var border = Ti.UI.createView({
 	
 });
 
-var openButton = Ti.UI.createLabel ({
+var openButton = Ti.UI.createImageView ({
 	
-	text: "Open My Life Gallery",
-	backgroundColor: "#85B200",
-	color: "#FFF",
-	font: {fontSize: 15, fontFamily: "Futura-CondensedExtraBold"},
+	image: "KS_nav_ui.png",
 	height: 60,
-	textAlign: "center",
 	width: 220,
 	borderRadius: 10
 	
