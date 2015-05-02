@@ -3,6 +3,7 @@
 var myFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "gallery");
 var myPhotos = myFolder.getDirectoryListing();
 
+
 var winWidth = Ti.Platform.displayCaps.platformWidth;
 var winHeight = Ti.Platform.displayCaps.platformHeight;
 
@@ -13,16 +14,25 @@ var canvasWidth = Ti.Platform.displayCaps.platformWidth + margin * (rowCount + 1
 var size = canvasWidth / rowCount;
 
 
-// console.log(myPhotos);
 
 
 // Create Intro Section
 
 var introWin = Ti.UI.createWindow({
 	
+	title: "Crazy Over Fish",
 	// backgroundColor: "#000",
-	backgroundImage: "background.png",
+	backgroundColor: "#3A00FF",
+	backgroundImage: "/images/background.png",
 	color: "#FFF"
+	
+});
+
+
+var navWin = Ti.UI.iOS.createNavigationWindow({
+	
+	window: introWin,
+	
 	
 });
 
@@ -36,28 +46,66 @@ var border = Ti.UI.createView({
 	
 });
 
-var openButton = Ti.UI.createLabel ({
+var favoriteButton = Ti.UI.createLabel ({
 	
-	text: "Open My Life Gallery",
-	backgroundColor: "#85B200",
-	color: "#FFF",
-	font: {fontSize: 15, fontFamily: "Futura-CondensedExtraBold"},
-	height: 60,
+	text: "Favorite Fish",
+	backgroundImage: "/images/favorites.jpg",
+		color: "#85B200",
+	font: {fontSize: 25, fontFamily: "Futura-CondensedExtraBold"},
 	textAlign: "center",
-	width: 220,
+	verticalAlign: 230,
+	top: border.top + border.height + 10,
+	paddingTop: 270,
+	width: 300,
+	height: 140,
 	borderRadius: 10
 	
 });
 
-var closeButton = Ti.UI.createLabel({
+var aquaButton = Ti.UI.createLabel ({
+	
+	text: "Aquascaping",
+	backgroundImage: "/images/favorites.jpg",
+		color: "#85B200",
+	font: {fontSize: 25, fontFamily: "Futura-CondensedExtraBold"},
+	textAlign: "center",
+	verticalAlign: 230,
+	top: favoriteButton.top + favoriteButton.height + 10,
+	width: 300,
+	height: 140,
+	borderRadius: 10
+	
+});
+
+var tankButton = Ti.UI.createLabel ({
+	
+	text: "Your Tank",
+	backgroundImage: "/images/favorites.jpg",
+		color: "#85B200",
+	font: {fontSize: 25, fontFamily: "Futura-CondensedExtraBold"},
+	textAlign: "center",
+	verticalAlign: 230,
+	top: aquaButton.top + aquaButton.height + 10,
+	width: 300,
+	height: 140,
+	borderRadius: 10
+	
+});
+
+
+
+// Random Gallery 
+
+var randButton = Ti.UI.createLabel({
 		
-	text: "Close Window",
+	text: "Random Image",
 	backgroundColor: "85B200",
 	font: {fontSize: 15, fontFamily: "Futura-Medium", weight: "bold"},
 	color: "#fff",		
 	width: "100%",
 	height: 35,
-	textAlign: "center"
+	textAlign: "center",
+	bottom: 0
 		
 });
 
@@ -76,146 +124,281 @@ var returnButton = Ti.UI.createLabel({
 });
 
 	
-var openGallery = function(){
-	
-
-
-	galleryWin.open();
-	
-};	
 
 
 		
 // Open Gallery Button	
-openButton.addEventListener("click", openGallery);
 
 
-// Create Gallery Section
 
 
 	
-var galleryWin = Ti.UI.createWindow({
-	
+var randomWin = Ti.UI.createWindow({
+	title: "Aquascaping",
 	backgroundColor: "#3A00FF",
-	backgroundImage: "background.png",
-	layout: "horizontal"
-		
+	backgroundImage: "/images/background.png",
+
 });
 
 
 
-var projectContainer = Ti.UI.createScrollView({
+var projectContainer = Ti.UI.createImageView({
 	
 	top:0,	bottom: 35,
-	backgroundImage: "background.png",
-	
-	width: winWidth,
-	contentWidth: winWidth,
-	height: winHeight - border.top - border.height - buttonHeight * 2,
-	backgroundColor: "#3A00FF",
-	layout: "horizontal",
-	showVerticalScrollIndicator: true
+	image: "/gallery/" + myPhotos[0],
+	left: 10,
+	right: 10	
 	
 });
 
 
-		var closeGalleryWindow = function() {
-		
-		galleryWin.close();
-		
-		};
-		
-closeButton.addEventListener("click" , closeGalleryWindow);
 
 
+
+
+
+
+
+var favoriteFish = 
+ [{title: "Black Ghost", images: "fish/blackghost.jpg", description: "It is considered a true bony fish. When properly cared for, the Black Ghost Knifefish can reach well over one foot in length. It possesses a weak electrical organ at the caudal peduncles which is used to locate food. It requires a minimum of a 150 gallon tank with excellent filtration. It is generally timid and reclusive, preferring a fine-gravel-bottom aquarium with plenty of roots and rocks for hiding places, as well as subdued to dark lighting."},
+ {title: "Figure 8 Puffer", images: "fish/puffer.jpg", description: "The Figure Eight Puffer is an entertaining fish that's full of personality.The question of tank mates for the Figure 8 Puffer is open to debate. Some have reported at least short-term success with mollies, bumblebee gobies, and others. But really most fish will be pestered and nipped often. Puffers appreciate a complex layout of decor to explore, as well as ample swimming room. If your puffer is just pacing the glass, it's probably bored! They are very personable creatures, and will come to recognize their owner and also the food container."}, 
+ {title: "Frontosa", images: "fish/frontosa.jpg", description: "The Frontosa African Cichlid is a fairly typical member of the Cichlidae family. Both sexes are characterized by a large frontal hump which will develop as the fish reaches maturity, or attains a length of around 4 inches.Although territorial, the Frontosa African Cichlid is generally not aggressive, but rather gentle and tolerant. It does well in a tank with plenty of rocks and caves for hiding and a sandy bottom."}, 
+ {title: "Flowerhorn", images: "fish/flowerhorn.jpg", description: "Flowerhorn cichlids are ornamental aquarium fish noted for their vivid colors and the distinctively shaped heads for which they are named. Criticism has also been made of placing flowerhorns, which are man-made fish, into fish taxa, which are reserved for the identification of species found in the wild."}, 
+ {title: "Electric Blue Jack", images: "fish/jackdempsey.jpg", description: "The Electric Blue Jack Dempsey is a freshwater fish that originates in the murky warm waters of Central America. It has a base color of electric blue to gray, and displays many iridescent blue and green spots, giving this fish a spectacular look.The Electric Blue Jack Dempsey requires an aquarium of at least 50 gallons, with a fine sand bottom. There should be rocks and roots for them to hide among. The plants should be hardy as the Jack Dempsey will burrow around and attack them."}];
+
+
+
+
+var favWin = Ti.UI.createWindow({
+	title: "Favorite Fish",
+	backgroundColor: "#3A00FF",
+	backgroundImage: "background.png",
+		
+
+});
+
+var headerSection = Ti.UI.createView({
+
+	height: 75,
+	top: 30
+
+});
+
+var headerText = Ti.UI.createLabel({
+	
+	text: "My Favorite Fish",
+	font: {fontSize: 25, fontFamily: "Futura-CondensedExtraBold"},
+	color: "#FFF"
 	
 	
+});
+
+var border = Ti.UI.createView({
+	backgroundColor: "#FFF",
+	height: 1,
+	top: headerSection.top + headerSection.height
+});
+
+
+
+
+// PLAYSTATION TITLE VIEWS
+
+var tableHeaderFish = Ti.UI.createView ({
 	
+	backgroundColor: "#000",
+	height: 45
+});
 
-
-// Large Image Window
-
-var largePic = function(){
+var tableTextFish = Ti.UI.createLabel ({
 	
-		var largeImageWin = Ti.UI.createWindow({
-			
-			backgroundColor: "#000",
-			backgroundImage: "background.png",
-
-			
-		});
-		
-		var largePicView = Ti.UI.createImageView({
-			
-			image: this.image,
-			top: border.top + border.height + 10,
-			left: 10,
-			right: 10,
-			bottom: 65
-
-			
-		});
-		
-
-		
-		var closeImageWindow = function() {
-		
-		largeImageWin.close();
-		
-		};
-		
-		returnButton.addEventListener("click" , closeImageWindow);
-
-			largeImageWin.add(returnButton);
-			largeImageWin.add(largePicView);
-			largeImageWin.add(border);
-			largeImageWin.open();
-
-
+	text: "PS4 Console Games",
+	font: {fontSize: 22, fontFamily: "Futura-CondensedExtraBold", weight: "bold"},
+	color: "#3A00FF",
+	top: 9,
+	left: 10
 	
+});
+
+var tableFooterFish = Ti.UI.createView ({
 	
+	height: 65
+});
+
+var tableFTextFish = Ti.UI.createLabel ({
+	
+	text: "It's quite amazing how fish actually have different personalities and agression levels. Some actually learn who their owner is and recognize the bag of fish food.",
+	font: {fontSize: 11, fontFamily: "Futura-Medium", weight: "bold"},
+	color: "#FFF",
+	top: 9,
+	left: 10
+	
+});
+
+
+
+tableHeaderFish.add(tableTextFish);
+tableFooterFish.add(tableFTextFish);
+
+
+
+
+// BUILD TABLE VIEW FOR MY GAME CONSOLES
+var console = Ti.UI.createTableView ({
+	
+	top: headerSection.top + headerSection.height + 10,
+	backgroundColor: "#3A00FF",
+});
+
+if (Ti.Platform.name === "iPhone OS") {
+	console.style = Ti.UI.iPhone.TableViewStyle.GROUPED;
+	
+}
+
+
+
+var fishSection = Ti.UI.createTableViewSection ({
+	
+	headerView: tableHeaderFish,
+	footerView: tableFooterFish
+	
+});
+
+
+// PLAYSTATION DESCRIPTION FUNCTION
+
+var descFish = function(){
+	
+	var descFishWin = Ti.UI.createWindow({
+		
+		backgroundColor: "#3A00FF"
+		
+		
+	});
+	
+	var descFishHead = Ti.UI.createView({
+		//backgroundColor: "#000000",
+		backgroundImage: "headerBg.png",
+		height: 75,
+		top: 30,
+		shadow:{
+	        shadowRadius:10,
+	        shadowOpacity:0.5,
+	        shadowOffset:{x:5, y:10}
+	    }
+	});
+	
+	var descHeaderText = Ti.UI.createLabel({
+		
+		text: this.title,
+		font: {fontSize: 30, fontFamily: "Futura-CondensedExtraBold"},
+		color: "#FFF"
+		
+		
+	});
+	
+	var descBorder = Ti.UI.createView({
+		backgroundColor: "#FFF",
+		height: 1,
+		top: descFishHead.top + descFishHead.height
+	});
+	
+	var descFishText = Ti.UI.createLabel({
+		
+		text: this.desc,
+		font: {fontSize: 12, fontFamily: "Futura-Medium", weight: "bold"},
+		color: "#fff",
+		top: descFishHead.top + descFishHead.height + 20,
+		height: 200,
+		left: 20,
+		right: 20
+	});
+	
+	var descImage = Ti.UI.createImageView ({
+		
+		image: this.img,
+		top: descFishText.top + descFishText.height + 10
+		
+	});
+	
+	var returnButton = Ti.UI.createLabel({
+		
+		text: "Return To List",
+		backgroundColor: "000",
+		font: {fontSize: 15, fontFamily: "Futura-Medium", weight: "bold"},
+		color: "#fff",		
+		borderRadius: 20,
+		width: 200,
+		height: 35,
+		bottom: 5,
+		textAlign: "center"
+		
+	});
+	
+	var closeWindow = function() {
+		
+		descFishWin.close();
+		
 	};
-			
-			
-// Load Images Loop
-
-		for (var x=0; x<myPhotos.length; x++){
-			
-			var view = Ti.UI.createView({
-				
-				backgroundColor: "#000",
-				top: 10,
-				left: 10,
-				width: size,
-				height: size
-				
-			});
-			
-			var thumb = Ti.UI.createImageView({
-				top: 0,
-				image: "pics/" + myPhotos[x],
-				width: view.width * 3,
-		
-			});
-			view.add(thumb);
-			projectContainer.add(view);
-			
-			thumb.addEventListener("click", largePic);			
-		};
-		
-					
+	
+	returnButton.addEventListener("click" , closeWindow);
+	
+	descFishHead.add(descFishText);	
+	descFishWin.add(descFishHead, descFishText, descImage, returnButton);
+	
+	descFishWin.open();
+	
+};
 
 
 
-// var loadfile = require("gallery");
+// PLAYSTATION DATA LOOP
+for  (x=0, t=favoriteFish.length; x<t; x++) {
+	
+	var fishRow = Ti.UI.createTableViewRow ({
+		color: "fff",
+		font: {fontSize: 12, fontFamily: "Futura-Medium", weight: "bold"},		
+		title: favoriteFish[x].title,
+		desc: favoriteFish[x].description,
+		img: favoriteFish[x].images,
+		hasChild: true
+	});
+	fishSection.add(fishRow);
+	fishRow.addEventListener("click" , descFish);
+	
+};
+
+
+
+
+var fishSections = [fishSection];
+
+console.setData (fishSections);
+
+
+favWin.add(headerSection, console);
+headerSection.add(headerText);
+
+
+
+
+
+
+
+
+
+
+
+
+var loadfile = require("functions");
 
 introWin.add(border);
-introWin.add(openButton);
+introWin.add(aquaButton,favoriteButton,tankButton);
 
-galleryWin.add(border);
-	galleryWin.add(projectContainer);
-	galleryWin.add(closeButton);
+randomWin.add(border);
+	randomWin.add(projectContainer);
+	randomWin.add(randButton);
 	
 
-introWin.open();
+navWin.open();
 	

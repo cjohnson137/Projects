@@ -1,0 +1,133 @@
+
+
+var myFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "gallery");
+var myPhotos = myFolder.getDirectoryListing();
+
+
+var winWidth = Ti.Platform.displayCaps.platformWidth;
+var winHeight = Ti.Platform.displayCaps.platformHeight;
+
+var buttonHeight = 35;
+var rowCount = 4;
+var margin = 10;
+var canvasWidth = Ti.Platform.displayCaps.platformWidth + margin * (rowCount + 1);
+var size = canvasWidth / rowCount;
+
+
+
+
+// Create Intro Section
+
+var introWin = Ti.UI.createWindow({
+	
+	// backgroundColor: "#000",
+	backgroundColor: "#3A00FF",
+	backgroundImage: "/images/background.png",
+	color: "#FFF"
+	
+});
+
+var border = Ti.UI.createView({
+	
+	backgroundColor: "#85B200",
+	color: "FFF",
+	width: winWidth,
+	height: 1,
+	top: 20
+	
+});
+
+var favoriteButton = Ti.UI.createLabel ({
+	
+	text: "Favorite Fish",
+	backgroundImage: "/images/favorites.jpg",
+		color: "#85B200",
+	font: {fontSize: 25, fontFamily: "Futura-CondensedExtraBold"},
+	textAlign: "center",
+	verticalAlign: 230,
+	top: border.top + border.height + 10,
+	paddingTop: 270,
+	width: 300,
+	height: 140,
+	borderRadius: 10
+	
+});
+
+var aquaButton = Ti.UI.createLabel ({
+	
+	text: "Aquascaping",
+	backgroundImage: "/images/favorites.jpg",
+		color: "#85B200",
+	font: {fontSize: 25, fontFamily: "Futura-CondensedExtraBold"},
+	textAlign: "center",
+	verticalAlign: 230,
+	top: favoriteButton.top + favoriteButton.height + 10,
+	width: 300,
+	height: 140,
+	borderRadius: 10
+	
+});
+
+var tankButton = Ti.UI.createLabel ({
+	
+	text: "Your Tank",
+	backgroundImage: "/images/favorites.jpg",
+		color: "#85B200",
+	font: {fontSize: 25, fontFamily: "Futura-CondensedExtraBold"},
+	textAlign: "center",
+	verticalAlign: 230,
+	top: aquaButton.top + aquaButton.height + 10,
+	width: 300,
+	height: 140,
+	borderRadius: 10
+	
+});
+
+
+// Fish List
+
+
+
+
+
+
+
+// Random Gallery 
+var randomWin = Ti.UI.createWindow({
+	
+	url: "random.js",
+	backgroundColor: "#3A00FF",
+	backgroundImage: "/images/background.png",
+	left: 10,
+	right: 10	
+});
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+var loadfile = require("functions");
+var loadRandom = require("random");
+
+introWin.add(border);
+introWin.add(aquaButton,favoriteButton,tankButton);
+
+randomWin.add(border);
+	randomWin.add(projectContainer);
+	randomWin.add(loadRandom.rButton);
+	
+
+introWin.open();
+	

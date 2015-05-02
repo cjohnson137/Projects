@@ -1,0 +1,50 @@
+// Random Gallery Open Window
+var aquaGallery = function(){
+	
+
+
+	randomWin.open();
+	
+};	
+
+var favFish = function(){
+	
+
+
+	favmWin.open();
+	
+};	
+
+aquaButton.addEventListener("click", aquaGallery);
+
+favorite.addEventListener("click", favFish);
+
+
+
+// Random Gallery Generate Random Image
+
+var randomImage = function() {
+			
+			do { // Start Do While loop to validate duplicates
+				
+							
+				console.log("1st checkValue = " + checkValue);
+        		console.log("1st randValue = " + randValue);
+
+
+            var randValue = Math.floor(Math.random() * myPhotos.length); 
+
+
+        	} while (randValue == checkValue);
+        	
+        	var checkValue = randValue;
+        		
+        		projectContainer.image = "/gallery/" + myPhotos[randValue];
+        	
+        		console.log("randValue = " + randValue);
+				console.log("2nd checkValue = " + checkValue);
+
+        	
+		};
+		
+randButton.addEventListener("click" , randomImage);

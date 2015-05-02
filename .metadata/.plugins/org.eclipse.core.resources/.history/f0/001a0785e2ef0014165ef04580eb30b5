@@ -1,0 +1,253 @@
+
+
+var myFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "gallery");
+var myPhotos = myFolder.getDirectoryListing();
+
+var winWidth = Ti.Platform.displayCaps.platformWidth;
+var winHeight = Ti.Platform.displayCaps.platformHeight;
+
+var buttonHeight = 35;
+var rowCount = 4;
+var margin = 10;
+var canvasWidth = Ti.Platform.displayCaps.platformWidth + margin * (rowCount + 1);
+var size = canvasWidth / rowCount;
+
+
+// console.log(myPhotos);
+
+
+// Create Intro Section
+
+var introWin = Ti.UI.createWindow({
+	
+	// backgroundColor: "#000",
+	backgroundImage: "background.png",
+	color: "#FFF"
+	
+});
+
+var border = Ti.UI.createView({
+	
+	backgroundColor: "#85B200",
+	color: "FFF",
+	width: winWidth,
+	height: 1,
+	top: 20
+	
+});
+
+var favoriteButton = Ti.UI.createLabel ({
+	
+	text: "Favorite Fish",
+	backgroundImage: "/images/favorites.jpg",
+		color: "#85B200",
+	font: {fontSize: 25, fontFamily: "Futura-CondensedExtraBold"},
+	textAlign: "center",
+	verticalAlign: 230,
+	top: border.top + border.height + 10,
+	width: 300,
+	height: 140,
+	borderRadius: 10
+	
+});
+
+var aquaButton = Ti.UI.createLabel ({
+	
+	text: "Aquascaping",
+	backgroundImage: "/images/favorites.jpg",
+		color: "#85B200",
+	font: {fontSize: 25, fontFamily: "Futura-CondensedExtraBold"},
+	textAlign: "center",
+	verticalAlign: 230,
+	top: favoriteButton.top + favoriteButton.height + 10,
+	width: 300,
+	height: 140,
+	borderRadius: 10
+	
+});
+
+var tankButton = Ti.UI.createLabel ({
+	
+	text: "Your Tank",
+	backgroundImage: "/images/favorites.jpg",
+		color: "#85B200",
+	font: {fontSize: 25, fontFamily: "Futura-CondensedExtraBold"},
+	textAlign: "center",
+	verticalAlign: 230,
+	top: aquaButton.top + aquaButton.height + 10,
+	width: 300,
+	height: 140,
+	borderRadius: 10
+	
+});
+
+var closeButton = Ti.UI.createLabel({
+		
+	text: "Close Window",
+	backgroundColor: "85B200",
+	font: {fontSize: 15, fontFamily: "Futura-Medium", weight: "bold"},
+	color: "#fff",		
+	width: "100%",
+	height: 35,
+	textAlign: "center"
+		
+});
+
+
+var returnButton = Ti.UI.createLabel({
+		
+	text: "Close Image",
+	backgroundColor: "85B200",
+	font: {fontSize: 15, fontFamily: "Futura-Medium", weight: "bold"},
+	color: "#fff",		
+	width: "100%",
+	height: 35,
+	bottom: 0,
+	textAlign: "center"
+		
+});
+
+	
+var openGallery = function(){
+	
+
+
+	galleryWin.open();
+	
+};	
+
+
+		
+// Open Gallery Button	
+openButton.addEventListener("click", openGallery);
+
+
+// Create Gallery Section
+
+
+	
+var galleryWin = Ti.UI.createWindow({
+	
+	backgroundColor: "#3A00FF",
+	backgroundImage: "background.png",
+	layout: "horizontal"
+		
+});
+
+
+
+var projectContainer = Ti.UI.createScrollView({
+	
+	top:0,	bottom: 35,
+	backgroundImage: "background.png",
+	
+	width: winWidth,
+	contentWidth: winWidth,
+	height: winHeight - border.top - border.height - buttonHeight * 2,
+	backgroundColor: "#3A00FF",
+	layout: "horizontal",
+	showVerticalScrollIndicator: true
+	
+});
+
+
+		var closeGalleryWindow = function() {
+		
+		galleryWin.close();
+		
+		};
+		
+closeButton.addEventListener("click" , closeGalleryWindow);
+
+
+	
+	
+	
+
+
+// Large Image Window
+
+var largePic = function(){
+	
+		var largeImageWin = Ti.UI.createWindow({
+			
+			backgroundColor: "#000",
+			backgroundImage: "background.png",
+
+			
+		});
+		
+		var largePicView = Ti.UI.createImageView({
+			
+			image: this.image,
+			top: border.top + border.height + 10,
+			left: 10,
+			right: 10,
+			bottom: 65
+
+			
+		});
+		
+
+		
+		var closeImageWindow = function() {
+		
+		largeImageWin.close();
+		
+		};
+		
+		returnButton.addEventListener("click" , closeImageWindow);
+
+			largeImageWin.add(returnButton);
+			largeImageWin.add(largePicView);
+			largeImageWin.add(border);
+			largeImageWin.open();
+
+
+	
+	
+	};
+			
+			
+// Load Images Loop
+
+		for (var x=0; x<myPhotos.length; x++){
+			
+			var view = Ti.UI.createView({
+				
+				backgroundColor: "#000",
+				top: 10,
+				left: 10,
+				width: size,
+				height: size
+				
+			});
+			
+			var thumb = Ti.UI.createImageView({
+				top: 0,
+				image: "pics/" + myPhotos[x],
+				width: view.width * 3,
+		
+			});
+			view.add(thumb);
+			projectContainer.add(view);
+			
+			thumb.addEventListener("click", largePic);			
+		};
+		
+					
+
+
+
+// var loadfile = require("gallery");
+
+introWin.add(border);
+introWin.add(aquaButton,favoriteButton,tankButton);
+
+galleryWin.add(border);
+	galleryWin.add(projectContainer);
+	galleryWin.add(closeButton);
+	
+
+introWin.open();
+	

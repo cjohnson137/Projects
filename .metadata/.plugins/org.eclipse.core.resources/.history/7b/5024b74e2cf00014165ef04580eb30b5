@@ -1,0 +1,22 @@
+var randomImage = function() {
+			
+			do { // Start Do While loop to validate duplicates
+				
+							
+console.log("1st checkValue = " + checkValue);
+
+
+            var randValue = Math.floor(Math.random() * myPhotos.length); 
+
+        	} while (randValue == checkValue);
+        	
+        	var checkValue = randValue;
+        	projectContainer.image = "/gallery/" + myPhotos[randValue];
+        	
+        	console.log("randValue = " + randValue);
+console.log("2nd checkValue = " + checkValue);
+
+        	
+		};
+		
+randButton.addEventListener("click" , randomImage);
