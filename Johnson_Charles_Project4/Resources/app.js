@@ -32,6 +32,8 @@ var introWin = Ti.UI.createWindow({
 var navWin = Ti.UI.iOS.createNavigationWindow({
 	
 	window: introWin,
+	font: {fontSize: 12, fontFamily: "Futura-Medium", weight: "bold"},
+
 	
 	
 });
@@ -157,14 +159,19 @@ var projectContainer = Ti.UI.createImageView({
 
 
 
-
-
-var favoriteFish = 
- [{title: "Black Ghost", images: "fish/blackghost.jpg", description: "It is considered a true bony fish. When properly cared for, the Black Ghost Knifefish can reach well over one foot in length. It possesses a weak electrical organ at the caudal peduncles which is used to locate food. It requires a minimum of a 150 gallon tank with excellent filtration. It is generally timid and reclusive, preferring a fine-gravel-bottom aquarium with plenty of roots and rocks for hiding places, as well as subdued to dark lighting."},
- {title: "Figure 8 Puffer", images: "fish/puffer.jpg", description: "The Figure Eight Puffer is an entertaining fish that's full of personality.The question of tank mates for the Figure 8 Puffer is open to debate. Some have reported at least short-term success with mollies, bumblebee gobies, and others. But really most fish will be pestered and nipped often. Puffers appreciate a complex layout of decor to explore, as well as ample swimming room. If your puffer is just pacing the glass, it's probably bored! They are very personable creatures, and will come to recognize their owner and also the food container."}, 
- {title: "Frontosa", images: "fish/frontosa.jpg", description: "The Frontosa African Cichlid is a fairly typical member of the Cichlidae family. Both sexes are characterized by a large frontal hump which will develop as the fish reaches maturity, or attains a length of around 4 inches.Although territorial, the Frontosa African Cichlid is generally not aggressive, but rather gentle and tolerant. It does well in a tank with plenty of rocks and caves for hiding and a sandy bottom."}, 
- {title: "Flowerhorn", images: "fish/flowerhorn.jpg", description: "Flowerhorn cichlids are ornamental aquarium fish noted for their vivid colors and the distinctively shaped heads for which they are named. Criticism has also been made of placing flowerhorns, which are man-made fish, into fish taxa, which are reserved for the identification of species found in the wild."}, 
- {title: "Electric Blue Jack", images: "fish/jackdempsey.jpg", description: "The Electric Blue Jack Dempsey is a freshwater fish that originates in the murky warm waters of Central America. It has a base color of electric blue to gray, and displays many iridescent blue and green spots, giving this fish a spectacular look.The Electric Blue Jack Dempsey requires an aquarium of at least 50 gallons, with a fine sand bottom. There should be rocks and roots for them to hide among. The plants should be hardy as the Jack Dempsey will burrow around and attack them."}];
+var types = {
+	"tank":	{	
+		"title": "My Fish",
+		"footer": "Some of my favorite fish that I have had in my 55 gallon tank.",
+		"fish": [
+			 {name: "Black Ghost", agg: "1", images: "fish/blackghost.jpg", description: "It is considered a true bony fish. When properly cared for, the Black Ghost Knifefish can reach well over one foot in length. It possesses a weak electrical organ at the caudal peduncles which is used to locate food. It requires a minimum of a 150 gallon tank with excellent filtration. It is generally timid and reclusive, preferring a fine-gravel-bottom aquarium with plenty of roots and rocks for hiding places, as well as subdued to dark lighting."},
+			 {name: "Figure 8 Puffer", agg: "6", images: "fish/puffer.jpg", description: "The Figure Eight Puffer is an entertaining fish that's full of personality.The question of tank mates for the Figure 8 Puffer is open to debate. Some have reported at least short-term success with mollies, bumblebee gobies, and others. But really most fish will be pestered and nipped often. Puffers appreciate a complex layout of decor to explore, as well as ample swimming room. If your puffer is just pacing the glass, it's probably bored! They are very personable creatures, and will come to recognize their owner and also the food container."}, 
+			 {name: "Frontosa", agg: "4", images: "fish/frontosa.jpg", description: "The Frontosa African Cichlid is a fairly typical member of the Cichlidae family. Both sexes are characterized by a large frontal hump which will develop as the fish reaches maturity, or attains a length of around 4 inches.Although territorial, the Frontosa African Cichlid is generally not aggressive, but rather gentle and tolerant. It does well in a tank with plenty of rocks and caves for hiding and a sandy bottom."}, 
+			 {name: "Flowerhorn", agg: "9", images: "fish/flowerhorn.jpg", description: "Flowerhorn cichlids are ornamental aquarium fish noted for their vivid colors and the distinctively shaped heads for which they are named. Criticism has also been made of placing flowerhorns, which are man-made fish, into fish taxa, which are reserved for the identification of species found in the wild."}, 
+			 {name: "Electric Blue Jack", agg: "6", images: "fish/jackdempsey.jpg", description: "The Electric Blue Jack Dempsey is a freshwater fish that originates in the murky warm waters of Central America. It has a base color of electric blue to gray, and displays many iridescent blue and green spots, giving this fish a spectacular look.The Electric Blue Jack Dempsey requires an aquarium of at least 50 gallons, with a fine sand bottom. There should be rocks and roots for them to hide among. The plants should be hardy as the Jack Dempsey will burrow around and attack them."}
+		 ]
+	}
+};
 
 
 
@@ -173,36 +180,29 @@ var favWin = Ti.UI.createWindow({
 	title: "Favorite Fish",
 	backgroundColor: "#3A00FF",
 	backgroundImage: "background.png",
+	
+	
+	
 		
 
 });
 
 var headerSection = Ti.UI.createView({
 
-	height: 75,
-	top: 30
 
 });
 
 var headerText = Ti.UI.createLabel({
 	
-	text: "My Favorite Fish",
-	font: {fontSize: 25, fontFamily: "Futura-CondensedExtraBold"},
-	color: "#FFF"
-	
+color: "#fff"
 	
 });
 
-var border = Ti.UI.createView({
-	backgroundColor: "#FFF",
-	height: 1,
-	top: headerSection.top + headerSection.height
-});
 
 
 
 
-// PLAYSTATION TITLE VIEWS
+
 
 var tableHeaderFish = Ti.UI.createView ({
 	
@@ -212,8 +212,8 @@ var tableHeaderFish = Ti.UI.createView ({
 
 var tableTextFish = Ti.UI.createLabel ({
 	
-	text: "PS4 Console Games",
-	font: {fontSize: 22, fontFamily: "Futura-CondensedExtraBold", weight: "bold"},
+	text: "MY FAVORITE FISH SPECIES",
+	font: {fontSize: 16, fontFamily: "Futura-CondensedExtraBold", weight: "bold"},
 	color: "#3A00FF",
 	top: 9,
 	left: 10
@@ -243,15 +243,15 @@ tableFooterFish.add(tableFTextFish);
 
 
 
-// BUILD TABLE VIEW FOR MY GAME CONSOLES
-var console = Ti.UI.createTableView ({
+// BUILD TABLE VIEW
+var tankTable = Ti.UI.createTableView ({
 	
 	top: headerSection.top + headerSection.height + 10,
 	backgroundColor: "#3A00FF",
 });
 
 if (Ti.Platform.name === "iPhone OS") {
-	console.style = Ti.UI.iPhone.TableViewStyle.GROUPED;
+	tankTable.style = Ti.UI.iPhone.TableViewStyle.GROUPED;
 	
 }
 
@@ -265,137 +265,270 @@ var fishSection = Ti.UI.createTableViewSection ({
 });
 
 
-// PLAYSTATION DESCRIPTION FUNCTION
+//  DESCRIPTION FUNCTION
 
 var descFish = function(){
 	
 	var descFishWin = Ti.UI.createWindow({
-		
+		title: this.title,
 		backgroundColor: "#3A00FF"
 		
 		
 	});
 	
-	var descFishHead = Ti.UI.createView({
-		//backgroundColor: "#000000",
-		backgroundImage: "headerBg.png",
-		height: 75,
-		top: 30,
-		shadow:{
-	        shadowRadius:10,
-	        shadowOpacity:0.5,
-	        shadowOffset:{x:5, y:10}
-	    }
-	});
-	
-	var descHeaderText = Ti.UI.createLabel({
-		
-		text: this.title,
-		font: {fontSize: 30, fontFamily: "Futura-CondensedExtraBold"},
-		color: "#FFF"
-		
-		
-	});
-	
+
 	var descBorder = Ti.UI.createView({
 		backgroundColor: "#FFF",
 		height: 1,
-		top: descFishHead.top + descFishHead.height
+
 	});
 	
 	var descFishText = Ti.UI.createLabel({
 		
 		text: this.desc,
-		font: {fontSize: 12, fontFamily: "Futura-Medium", weight: "bold"},
+		font: {fontSize: 14, fontFamily: "Futura-Medium", weight: "bold"},
 		color: "#fff",
-		top: descFishHead.top + descFishHead.height + 20,
+		top: 20,
 		height: 200,
 		left: 20,
 		right: 20
 	});
 	
+		
+
+	var descFishAggText = Ti.UI.createLabel({
+
+		top: descFishText.top + descFishText.height + 10,
+
+		text: "Fish Aggression Level",
+		color: "#fff"
+		
+	});
+	
+
+	var descFishAgg = Ti.UI.createView ({
+		
+		image: "images/aggression.png",
+		top: descFishAggText.top + 25,
+		width: this.aggress * 10 + "%",
+		height: 35,
+		backgroundColor: "#C20000"
+
+		
+	});
+
+
+	descFishPer = Ti.UI.createLabel ({
+		font: {fontSize: 12, fontFamily: "Futura-Medium", weight: "bold"},
+		text: this.aggress * 10 + "%",
+		color: "#FFF",
+		
+		
+	});
+	
+	descFishAgg.add(descFishPer);
+	
 	var descImage = Ti.UI.createImageView ({
 		
 		image: this.img,
-		top: descFishText.top + descFishText.height + 10
+		top: descFishAgg.top + descFishAgg.height + 10,
+		bottom: 20
 		
 	});
 	
-	var returnButton = Ti.UI.createLabel({
-		
-		text: "Return To List",
-		backgroundColor: "000",
-		font: {fontSize: 15, fontFamily: "Futura-Medium", weight: "bold"},
-		color: "#fff",		
-		borderRadius: 20,
-		width: 200,
-		height: 35,
-		bottom: 5,
-		textAlign: "center"
-		
-	});
+
 	
-	var closeWindow = function() {
-		
-		descFishWin.close();
-		
-	};
 	
-	returnButton.addEventListener("click" , closeWindow);
+	descFishWin.add(descFishText, descFishAgg, descFishAggText, descImage);
 	
-	descFishHead.add(descFishText);	
-	descFishWin.add(descFishHead, descFishText, descImage, returnButton);
-	
-	descFishWin.open();
+	navWin.openWindow(descFishWin);
 	
 };
 
 
-
-// PLAYSTATION DATA LOOP
-for  (x=0, t=favoriteFish.length; x<t; x++) {
 	
-	var fishRow = Ti.UI.createTableViewRow ({
-		color: "fff",
-		font: {fontSize: 12, fontFamily: "Futura-Medium", weight: "bold"},		
-		title: favoriteFish[x].title,
-		desc: favoriteFish[x].description,
-		img: favoriteFish[x].images,
-		hasChild: true
-	});
-	fishSection.add(fishRow);
-	fishRow.addEventListener("click" , descFish);
+//  DATA LOOP
+
+
+
+for(var lvl1 in types){
 	
-};
+	for(var lvl2 in types[lvl1]){
+		
+		if(lvl2 === "fish"){
+			
+			for(var lvl3=0; lvl3<types[lvl1].fish.length; lvl3++){
+				
+				// console.log(types[lvl1].fish[lvl3]);
+				// console.log(types[lvl1].fish[lvl3].description);
+				
+
+					
+					var fishRow = Ti.UI.createTableViewRow ({
+							color: "fff",
+							font: {fontSize: 12, fontFamily: "Futura-Medium", weight: "bold"},		
+							title: types[lvl1].fish[lvl3].name,
+							aggress: types[lvl1].fish[lvl3].agg,
+							desc: types[lvl1].fish[lvl3].description,
+							img: types[lvl1].fish[lvl3].images,
+							hasChild: true
+						});
+						fishSection.add(fishRow);
+						console.log(types[lvl1].fish[lvl3].name);
+						fishRow.addEventListener("click" , descFish);
+						
+					};
+
+				
+			}
+			
+		
+	}
+			
+	
+		
+	}
+			
 
 
+	
 
 
 var fishSections = [fishSection];
 
-console.setData (fishSections);
+tankTable.setData (fishSections);
 
 
-favWin.add(headerSection, console);
-headerSection.add(headerText);
-
-
+favWin.add(tankTable);
 
 
 
 
 
+// CUSTOM WIND0W - FISH FOR YOUR TANK
+
+
+
+var tankWin = Ti.UI.createWindow({
+	
+	title: "Your Type of Fish",
+	backgroundColor: "#3A00FF",
+	backgroundImage: "/images/background.png",
+	color: "#FFF",
+
+	
+});
+
+
+var tankInfo = Ti.UI.createLabel ({
+	
+	text: "Fill in the form to build your Fish Tank. You can enter your tank size and types of fish.",
+	top:20,
+	height: 50,
+	color: "#fff",
+	font: {fontSize: 12, fontFamily: "Futura-Medium", weight: "bold"},
+	left: 10,
+	right: 10
+	
+	
+});
+
+var tankName = Ti.UI.createTextField({
+	
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	color: "#BBBBBB",
+	backgroundColor: "#85B200",
+	width: "100%",
+	left: 10,
+	right: 10,
+	value: "Enter your name",
+	top: tankInfo.top + tankInfo.height + 10,
+	height: 35
+	
+	
+	
+});
+
+var tankSize = Ti.UI.createTextField({
+	
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	color: "#BBBBBB",
+	width: "100%",
+	left: 10,
+	right: 10,
+	value: "55 Gallon",
+	top: tankName.top + tankName.height + 10,
+	height: 35
+	
+	
+	
+});
+
+var tankType = Ti.UI.createTextField({
+	
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	color: "#BBBBBB",
+	width: "100%",
+	left: 10,
+	right: 10,
+	value: "ex: Black Ghost",
+	top: tankSize.top + tankSize.height + 10,
+	height: 35
+	
+	
+	
+});
+
+
+var tankSubmit = Ti.UI.createButton ({
+	
+	bottom: 0,
+	backgroundColor: "#3A00FF",
+	width: "100%"
+
+	
+	
+});
+
+var submitText = Ti.UI.createLabel ({
+		font: {fontSize: 14, fontFamily: "Futura-Medium", weight: "bold"},
+	text: "Build Tank",
+	color: "#fff",
+	
+});
+
+
+
+var dataWin = Ti.UI.createWindow ({
+	
+	
+	
+});
+var submitTank = function(){
+	
+			navWin.openWindow(dataWin);
+		
+	
+	
+};
 
 
 
 
+
+tankSubmit.add(submitText);
+
+
+
+tankWin.add(tankName,tankSize,tankType,tankInfo, tankSubmit);
+
+
+tankSubmit.addEventListener("click", submitTank)
 
 var loadfile = require("functions");
 
-introWin.add(border);
 introWin.add(aquaButton,favoriteButton,tankButton);
 
-randomWin.add(border);
 	randomWin.add(projectContainer);
 	randomWin.add(randButton);
 	

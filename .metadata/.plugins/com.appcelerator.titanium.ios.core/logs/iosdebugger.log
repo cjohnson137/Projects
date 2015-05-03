@@ -1,34 +1,33 @@
-Logger started at: Saturday, April 4, 2015 9:48:29 PM CDT
+Logger started at: Saturday, May 2, 2015 10:01:48 PM CDT
 Component: com.appcelerator.titanium.ios.core
 Version: 1.0.0.1411756658
-[48:29.410] Sent: >21*1428202109406*version<
-[48:29.411] Recv: >1428202109406*2*3.6.0<
-[48:29.412] Sent: >20*1428202109407*update<
-[48:29.413] Recv: >1428202109407*3.6.0<
-[48:29.414] Sent: >45*1428202109408*option*stepFiltersEnabled*false<
-[48:29.414] Recv: >1428202109408<
-[48:29.414] Sent: >36*1428202109409*option*monitorXHR*true<
-[48:29.415] Recv: >1428202109409<
-[48:29.415] Sent: >45*1428202109410*option*suspendOnFirstLine*false<
-[48:29.415] Recv: >1428202109410<
-[48:29.415] Sent: >46*1428202109411*option*suspendOnExceptions*false<
-[48:29.416] Recv: >1428202109411<
-[48:29.416] Sent: >41*1428202109412*option*suspendOnErrors*true<
-[48:29.416] Recv: >1428202109412<
-[48:29.416] Sent: >43*1428202109413*option*suspendOnKeywords*true<
-[48:29.417] Recv: >1428202109413<
-[48:29.417] Sent: >45*1428202109414*option*bypassConstructors*false<
-[48:29.417] Recv: >1428202109414<
-[48:29.417] Sent: >45*1428202109415*option*stepFiltersEnabled*false<
-[48:29.418] Recv: >1428202109415<
-[48:29.418] Sent: >30*1428202109416*detailFormatters<
-[48:29.419] Recv: >1428202109416<
-[48:29.419] Sent: >20*1428202109417*enable<
-[48:29.422] Recv: >1428202109417<
-[48:29.444] Recv: >threads*created*0*kroll$1<
-[48:29.447] Recv: >log*out*[DEBUG] Loading: /Users/CJ-MACBOOK/Library/Developer/CoreSimulator/Devices/FEBEDB8E-8AC1-4D53-9D5C-8DFFAE834F3C/data/Containers/Bundle/Application/C6E731D1-DCEC-433C-9413-640CD6C43517/Johnson_Charles_Project1.app/app.js, Resource: app_js<
-[48:29.448] Recv: >scripts*created*1|app:/app.js||1|59<
-[48:29.449] Recv: >resumed*0*started<
-[48:29.449] Recv: >log*out*[DEBUG] Loading: /Users/CJ-MACBOOK/Library/Developer/CoreSimulator/Devices/FEBEDB8E-8AC1-4D53-9D5C-8DFFAE834F3C/data/Containers/Bundle/Application/C6E731D1-DCEC-433C-9413-640CD6C43517/Johnson_Charles_Project1.app/_app_props_.json, Resource: _app_props__json<
-[48:29.493] Recv: >log*out*[DEBUG] Application booted in 293.064952 ms<
-----------End of file----------
+[1:48.326] Sent: >21*1430622108323*version<
+[1:48.327] Recv: >1430622108323*2*3.6.0<
+[1:48.329] Sent: >20*1430622108324*update<
+[1:48.330] Recv: >1430622108324*3.6.0<
+[1:48.424] Sent: >45*1430622108325*option*stepFiltersEnabled*false<
+[1:48.425] Recv: >1430622108325<
+[1:48.425] Sent: >36*1430622108326*option*monitorXHR*true<
+[1:48.425] Recv: >1430622108326<
+[1:48.426] Sent: >45*1430622108327*option*suspendOnFirstLine*false<
+[1:48.426] Recv: >1430622108327<
+[1:48.426] Sent: >46*1430622108328*option*suspendOnExceptions*false<
+[1:48.427] Recv: >1430622108328<
+[1:48.427] Sent: >41*1430622108329*option*suspendOnErrors*true<
+[1:48.427] Recv: >1430622108329<
+[1:48.427] Sent: >43*1430622108330*option*suspendOnKeywords*true<
+[1:48.427] Recv: >1430622108330<
+[1:48.427] Sent: >45*1430622108331*option*bypassConstructors*false<
+[1:48.428] Recv: >1430622108331<
+[1:48.428] Sent: >45*1430622108332*option*stepFiltersEnabled*false<
+[1:48.428] Recv: >1430622108332<
+[1:48.428] Sent: >30*1430622108333*detailFormatters<
+[1:48.428] Recv: >1430622108333<
+[1:48.430] Sent: >20*1430622108334*enable<
+[1:48.430] Recv: >1430622108334<
+[1:48.459] Recv: >threads*created*0*kroll$1<
+[1:48.802] Recv: >log*out*[DEBUG] Loading: /Users/CJ-MACBOOK/Library/Developer/CoreSimulator/Devices/17E110CB-D976-4D4C-A14E-2813F92B6FD6/data/Containers/Bundle/Application/969BF8F6-678A-4A5A-B9E7-8E85A71D38D2/Johnson_Charles_Project2.app/app.js, Resource: app_js<
+[1:48.809] Recv: >scripts*created*1|app:/app.js||1|292<
+[1:48.809] Recv: >resumed*0*started<
+[1:48.815] Recv: >log*out*[DEBUG] Loading: /Users/CJ-MACBOOK/Library/Developer/CoreSimulator/Devices/17E110CB-D976-4D4C-A14E-2813F92B6FD6/data/Containers/Bundle/Application/969BF8F6-678A-4A5A-B9E7-8E85A71D38D2/Johnson_Charles_Project2.app/_app_props_.json, Resource: _app_props__json<
+[1:48.858] Recv: >log*out*[DEBUG] Application booted in 945.225954 ms<
