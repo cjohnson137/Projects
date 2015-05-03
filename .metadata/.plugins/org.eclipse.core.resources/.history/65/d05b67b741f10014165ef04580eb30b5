@@ -508,7 +508,7 @@ var dataWin = Ti.UI.createWindow ({
 });
 
 
-var line1 = Ti.UI.createLabel ({
+var line1 = createLabel ({
 	
 	
 	
@@ -532,13 +532,9 @@ tankSubmit.add(submitText);
 tankWin.add(tankName,tankSize,tankType,tankInfo, tankSubmit);
 
 
-tankSubmit.addEventListener("click", submitTank);
+tankSubmit.addEventListener("click", submitTank)
 
 var loadfile = require("functions");
-var loadrandom = require("random");
-var loadfavorites = require("favorites");
-var loadcustom = require("custom");
-
 
 introWin.add(aquaButton,favoriteButton,tankButton);
 

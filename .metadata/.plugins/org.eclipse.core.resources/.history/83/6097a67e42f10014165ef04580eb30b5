@@ -1,7 +1,8 @@
 var myFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "gallery");
 var myPhotos = myFolder.getDirectoryListing();
 
-// Random Gallery Generate Random Image
+
+// Random Gallery Open Window
 
 
 
@@ -70,6 +71,9 @@ var returnButton = Ti.UI.createLabel({
 		
 });
 
+exports.pContainer = projectContainer;
+exports.rButton = randButton;
+exports.openRand = randomGallery;
 
 
 

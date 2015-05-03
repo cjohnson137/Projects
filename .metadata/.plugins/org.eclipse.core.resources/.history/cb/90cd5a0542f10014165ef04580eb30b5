@@ -42,6 +42,7 @@ var tankCustom = function() {
 
 aquaButton.addEventListener("click", aquaGallery);
 
+favoriteButton.addEventListener("click", favFish);
 
 tankButton.addEventListener("click", tankCustom);
 		

@@ -1,0 +1,29 @@
+// Random Gallery Open Window
+var aquaGallery = function(){
+	
+	
+
+
+	navWin.openWindow(randomWin);
+	
+};	
+
+
+
+
+
+
+
+
+
+var tankCustom = function() {
+	
+		navWin.openWindow(tankWin);
+	
+};
+
+aquaButton.addEventListener("click", aquaGallery);
+
+
+tankButton.addEventListener("click", tankCustom);
+		

@@ -45,4 +45,3 @@ aquaButton.addEventListener("click", aquaGallery);
 
 tankButton.addEventListener("click", tankCustom);
 		
-randButton.addEventListener("click" , randomImage);

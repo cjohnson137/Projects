@@ -3,6 +3,25 @@ var myPhotos = myFolder.getDirectoryListing();
 
 // Random Gallery Generate Random Image
 
+var randomImage = function() {
+			
+			do { // Start Do While loop to validate duplicates
+				
+			var checkValue = randValue;				
+
+            var randValue = Math.floor(Math.random() * myPhotos.length); 
+
+
+        	} while (randValue == checkValue);
+        	
+        		
+        		projectContainer.image = "/gallery/" + myPhotos[randValue];
+        	
+
+        	
+		};
+// Random Gallery Open Window
+
 
 
 // Random Gallery Generate Random Image
@@ -70,6 +89,9 @@ var returnButton = Ti.UI.createLabel({
 		
 });
 
+exports.pContainer = projectContainer;
+exports.rButton = randButton;
+exports.openRand = randomGallery;
 
 
 
